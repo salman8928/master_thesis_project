@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<div id="brandname">
+		</div>
+	</div>
+	</header>
+	<p style="color:blue;font-size:40px;text-align: center;"><b>Air Quality Index Prediction</b></p>
+	<div class="results">
+
+	 <table>
+         <tbody>
+         <th style="color:blue;font-size:2q0px;">AQI Value</th>
+         {# here we iterate over every item in our list#}
+         {% for item in prediction %}
+             <tr><td>{{ item }}</td></tr>
+         {% endfor %}
+         </tbody>
+     </table>
+	</div>
+</body>
+</html>
